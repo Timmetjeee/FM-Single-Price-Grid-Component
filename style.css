@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --color-primary: hsl(179, 62%, 43%);
+  --color-secondary: hsl(71, 73%, 54%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Typography */
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+h2 {
+  color: var(--color-primary);
+  margin-bottom: 1em;
+}
+
+h3 {
+  color: hsl(204, 43%, 93%);
+  margin-bottom: 1em;
+}
+
+p {
+  color: hsl(204, 43%, 84%);
+}
+
+.sub-title {
+  color: var(--color-secondary);
+  margin-bottom: 1em;
+}
+
+header p {
+  color: hsl(218, 22%, 67%);
+}
+
+.price {
+  color: hsl(204, 43%, 81%);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.price span {
+  color: hsl(204, 43%, 93%);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.3em;
+}
+
+#why-us p {
+  max-width: 23ch;
+  font-size: 0.95rem;
+}
+
+/* Layout */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: min(95%, 350px);
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+header,
+section {
+  padding: 2.5em;
+}
+
+#monthly-subscription {
+  background-color: var(--color-primary);
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  border-radius: 7px;
+  margin-top: 2em;
+  background-color: var(--color-secondary);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--color-primary);
+  background-color: white;
+}
+
+#why-us {
+  background-color: hsl(179, 47%, 52%);
+}
+
+/* Desktop Version */
+
+@media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template: 47% 53% / repeat(2, 1fr);
+    width: min(95%, 650px);
+  }
+
+  header {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  #monthly-subscription {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  #why-us {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
