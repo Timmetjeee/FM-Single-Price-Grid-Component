@@ -90,7 +90,7 @@ section {
   padding: 2.5em;
 }
 
-#monthly-subscription {
+section {
   background-color: var(--color-primary);
 }
 
@@ -117,7 +117,7 @@ section {
 }
 
 #why-us {
-  background-color: hsl(179, 47%, 52%);
+  opacity: 0.8;
 }
 
 #why-us ul {
